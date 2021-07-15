@@ -7,14 +7,58 @@
 body{
     background-color: lightgray;
 }
-
-.container{
-    border: 2px solid red;
+/* common  */
+.bar{
+    height: 80px;
+    width: 100%;
+    background-color: red;
+    color: white;
 }
-
-h1{
+/* header  */
+header{
+    border: 2px solid red;
+    background-color: lightpink;
+    margin-top: 50px;
+}
+.top{
+    padding: 10px;
+    text-transform: uppercase;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    border: 2px solid black;
+}
+.top p{
+    font-size: 25px;
+}
+/* main  */
+main{
+    font-size: 25px;
+    color: black;
+    background-color: #F7F7F7;
+}
+.first_row,
+.second_row,
+.text{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+}
+.barcode{
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+}
+.train-image img{
+    width: 260px;
+    height: 250px;
+    object-fit: contain;
+    margin-left: 30px;
+}
+.footer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
 }

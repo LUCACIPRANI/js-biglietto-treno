@@ -9,11 +9,11 @@
 
 var km_utente = parseInt(prompt("Quanti chilometri percorrerai ? "));
 
-document.getElementById("km").innerHTML = "Percorrerò " + km_utente + " km in treno";
+document.getElementById("km").innerHTML = km_utente;
 
 var eta_utente = parseInt(prompt("Quanti hanni hai ? "));
 
-document.getElementById("age").innerHTML = "Ho " + eta_utente + " anni";
+document.getElementById("age").innerHTML = eta_utente;
 
 // defining variables 
 
@@ -34,9 +34,7 @@ else {
 
 prezzo_biglietto = (prezzo_biglietto.toFixed(2));
 
-
-document.getElementById("ticket_cost").innerHTML = "Il biglietto costa " + prezzo_biglietto + " €";
-
+document.getElementById("ticket_cost").innerHTML = "Total cost " + prezzo_biglietto + " €";
 
 
 // Console 
