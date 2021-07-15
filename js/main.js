@@ -9,20 +9,39 @@
 
 var km_utente = parseInt(prompt("Quanti chilometri percorrerai ? "));
 
+document.getElementById("km").innerHTML = "Percorrerò " + km_utente + " km in treno";
+
 var eta_utente = parseInt(prompt("Quanti hanni hai ? "));
 
-console.log(km_utente);
-console.log(eta_utente);
+document.getElementById("age").innerHTML = "Ho " + eta_utente + " anni";
+
+// defining variables 
+
+var scontoUnderDiciotto = 0.8;
+var scontoOverSessantacinque = 0.6;
+var prezzo_biglietto = 0.21;
+
 
 if (eta_utente < 18) {
-    prezzo_biglietto = (km_utente * 0.21) * 0.8;
+    prezzo_biglietto = (km_utente * prezzo_biglietto) * scontoUnderDiciotto;
 }
 else if (eta_utente > 65) {
-    prezzo_biglietto = (km_utente * 0.21) * 0.6;
+    prezzo_biglietto = (km_utente * prezzo_biglietto) * scontoOverSessantacinque;
 }
 else {
-    prezzo_biglietto = (km_utente * 0.21);
+    prezzo_biglietto = (km_utente * prezzo_biglietto);
 }
 
+prezzo_biglietto = (prezzo_biglietto.toFixed(2));
+
+
+document.getElementById("ticket_cost").innerHTML = "Il biglietto costa " + prezzo_biglietto + " €";
+
+
+
+// Console 
+console.log(km_utente);
+console.log(eta_utente);
 console.log("il costo del biglietto è " + prezzo_biglietto)
+
 
