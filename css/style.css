@@ -25,11 +25,8 @@ header{
     text-transform: uppercase;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-}
-.top p{
-    font-size: 25px;
 }
 /* main  */
 main{
@@ -41,9 +38,14 @@ main{
 .second_row,
 .text{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 10px 0;
+    padding-top: 10px;
+}
+.first_row li,
+.top li{
+    font-size: 25px;
+    list-style-type: none;
 }
 .barcode{
     width: 180px;

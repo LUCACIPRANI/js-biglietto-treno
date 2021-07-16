@@ -7,21 +7,21 @@
 //-  va applicato uno sconto del 40% per gli over 65.
 
 
+// defining variables 
 var km_utente = parseInt(prompt("Quanti chilometri percorrerai ? "));
 
 document.getElementById("km").innerHTML = km_utente;
 
-var eta_utente = parseInt(prompt("Quanti hanni hai ? "));
+var eta_utente = parseInt(prompt("Quanti anni hai ? "));
 
 document.getElementById("age").innerHTML = eta_utente;
 
-// defining variables 
-
+// defining ticket variables 
 var scontoUnderDiciotto = 0.8;
 var scontoOverSessantacinque = 0.6;
 var prezzo_biglietto = 0.21;
 
-
+// conditions 
 if (eta_utente < 18) {
     prezzo_biglietto = (km_utente * prezzo_biglietto) * scontoUnderDiciotto;
 }
@@ -32,12 +32,9 @@ else {
     prezzo_biglietto = (km_utente * prezzo_biglietto);
 }
 
-prezzo_biglietto = (prezzo_biglietto.toFixed(2));
+document.getElementById("ticket_cost").innerHTML = "Total cost " + prezzo_biglietto.toFixed(2) + " €";
 
-document.getElementById("ticket_cost").innerHTML = "Total cost " + prezzo_biglietto + " €";
-
-
-// Console 
+//  Console 
 console.log(km_utente);
 console.log(eta_utente);
 console.log("il costo del biglietto è " + prezzo_biglietto)
